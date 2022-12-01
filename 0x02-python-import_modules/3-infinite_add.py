@@ -1,8 +1,8 @@
 #!/usr/bin/python3
-import sys
-
-if __name__ == '__main__':
-    args = sys.argv
-    args.pop(0)
-    print(sum(map(int, args)))
-
+if __name__ == "__main__":
+    import sys
+    result = 0
+    for arg in sys.argv:
+        if arg != sys.argv[0]:
+            result += int(arg)
+    print(result)
